@@ -1,8 +1,7 @@
-job() {
-  folder('Tools') {
-    description('Folder for miscellaneous tools.')
-    displayName('Tools')
-  }
+folder('Tools') {
+  description('Folder for miscellaneous tools.')
+  displayName('Tools')
+
   freeStyleJob('Tools/clone-repository') {
     parameters {
       stringParam('GIT_REPOSITORY_URL', '', 'Git URL of the repository to clone')
@@ -38,9 +37,9 @@ job() {
             shell('make tests_run')
             shell('make clean')
           }
-        }'''.stripIndent())
+        }
+        '''.stripIndent())
       }
     }
   }
-
 }
