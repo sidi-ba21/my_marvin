@@ -21,7 +21,7 @@ folder('Tools') {
     steps {
       dsl {
         text('''
-        job("Tools/$DISPLAY_NAME") {
+        freeStyleJob("Tools/$DISPLAY_NAME") {
           scm {
             github("$GITHUB_NAME")
           }
